@@ -8,10 +8,10 @@ namespace Jammers
 {
 
     [CreateAssetMenu(fileName = "InputReader", menuName = "Game/Input Reader")]
-    public class InputReader : ScriptableObject, 
-        GameInput.IGameplayActions, 
-        GameInput.IDialoguesActions, 
-        GameInput.IMenusActions, 
+    public class InputReader : ScriptableObject,
+        GameInput.IGameplayActions,
+        GameInput.IDialoguesActions,
+        GameInput.IMenusActions,
         GameInput.ICheatsActions
     {
 
@@ -28,7 +28,6 @@ namespace Jammers
         public event UnityAction SaveActionButtonEvent = delegate { };
         public event UnityAction ResetActionButtonEvent = delegate { };
         public event UnityAction<Vector2> MoveEvent = delegate { };
-        public event UnityAction<Vector2, bool> CameraMoveEvent = delegate { };
         public event UnityAction EnableMouseControlCameraEvent = delegate { };
         public event UnityAction DisableMouseControlCameraEvent = delegate { };
         public event UnityAction StartedRunning = delegate { };
@@ -125,7 +124,7 @@ namespace Jammers
             bool isGameplay = false;
 
             // Interaction is only possible when in gameplay GameState
-            if (context.phase == InputActionPhase.Performed && isGameplay) 
+            if (context.phase == InputActionPhase.Performed && isGameplay)
             {
                 InteractEvent.Invoke();
             }
@@ -145,7 +144,9 @@ namespace Jammers
 
         public void OnMove(InputAction.CallbackContext context)
         {
-            MoveEvent.Invoke(context.ReadValue<Vector2>());
+            var value = context.ReadValue<Vector2>();
+            Debug.Log($"moving {value}");
+            MoveEvent.Invoke(value);
         }
 
         public void OnRun(InputAction.CallbackContext context)
@@ -169,11 +170,6 @@ namespace Jammers
             }
         }
 
-        public void OnRotateCamera(InputAction.CallbackContext context)
-        {
-            CameraMoveEvent.Invoke(context.ReadValue<Vector2>(), IsDeviceMouse(context));
-        }
-
         public void OnMouseControlCamera(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
@@ -186,8 +182,6 @@ namespace Jammers
                 DisableMouseControlCameraEvent.Invoke();
             }
         }
-
-        private bool IsDeviceMouse(InputAction.CallbackContext context) => context.control.device.name == "Mouse";
 
         public void OnMoveSelection(InputAction.CallbackContext context)
         {

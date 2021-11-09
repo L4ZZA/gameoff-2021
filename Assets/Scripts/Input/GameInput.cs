@@ -69,14 +69,6 @@ namespace Jammers
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""RotateCamera"",
-                    ""type"": ""Value"",
-                    ""id"": ""1e83df91-f55f-4e15-9fbb-5867bfb536ac"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""MouseControlCamera"",
                     ""type"": ""Button"",
                     ""id"": ""baeff631-5c87-4830-97ff-63752ff2ebb4"",
@@ -194,83 +186,6 @@ namespace Jammers
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Keyboard IJKL"",
-                    ""id"": ""bb5bdd36-12f9-4c58-8a8a-42c6ad4bccde"",
-                    ""path"": ""2DVector(mode=1)"",
-                    ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=8,y=8)"",
-                    ""groups"": """",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""66057745-e282-4695-87a5-fd5b58d5a364"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""de278692-758a-4a96-aba7-35337e1a4d29"",
-                    ""path"": ""<Keyboard>/k"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""0a2a80af-264e-444a-b3dd-59270009cd2c"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""5d52e22a-0950-4dff-b20c-09810bf8c340"",
-                    ""path"": ""<Keyboard>/l"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a3a6f54e-04ce-4a19-abd9-00abb5afebbe"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": ""StickDeadzone,ScaleVector2(x=8,y=8)"",
-                    ""groups"": ""KeyboardOrGamepad;Gamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d0ad277c-40b5-4184-b700-83b7c2535107"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=2,y=2)"",
-                    ""groups"": ""KeyboardOrGamepad;MouseAndKeyboard"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": """",
                     ""id"": ""11e81718-f782-4d07-8c8d-eaacbd2babd3"",
                     ""path"": ""<Mouse>/rightButton"",
@@ -348,9 +263,31 @@ namespace Jammers
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""left"",
+                    ""id"": ""a390c1fb-20bc-4c9f-b163-557231a3456e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": ""down"",
                     ""id"": ""42d01021-5f53-4a84-9d91-d89e5c01bb8f"",
                     ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""bc1916fd-aba7-41de-9817-d1f04ce7d76b"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MouseAndKeyboard"",
@@ -1733,7 +1670,6 @@ namespace Jammers
             m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
             m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
             m_Gameplay_OpenInventory = m_Gameplay.FindAction("OpenInventory", throwIfNotFound: true);
-            m_Gameplay_RotateCamera = m_Gameplay.FindAction("RotateCamera", throwIfNotFound: true);
             m_Gameplay_MouseControlCamera = m_Gameplay.FindAction("MouseControlCamera", throwIfNotFound: true);
             m_Gameplay_Run = m_Gameplay.FindAction("Run", throwIfNotFound: true);
             // Menus
@@ -1815,7 +1751,6 @@ namespace Jammers
         private readonly InputAction m_Gameplay_Interact;
         private readonly InputAction m_Gameplay_Pause;
         private readonly InputAction m_Gameplay_OpenInventory;
-        private readonly InputAction m_Gameplay_RotateCamera;
         private readonly InputAction m_Gameplay_MouseControlCamera;
         private readonly InputAction m_Gameplay_Run;
         public struct GameplayActions
@@ -1828,7 +1763,6 @@ namespace Jammers
             public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
             public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
             public InputAction @OpenInventory => m_Wrapper.m_Gameplay_OpenInventory;
-            public InputAction @RotateCamera => m_Wrapper.m_Gameplay_RotateCamera;
             public InputAction @MouseControlCamera => m_Wrapper.m_Gameplay_MouseControlCamera;
             public InputAction @Run => m_Wrapper.m_Gameplay_Run;
             public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
@@ -1858,9 +1792,6 @@ namespace Jammers
                     @OpenInventory.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
                     @OpenInventory.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
                     @OpenInventory.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
-                    @RotateCamera.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
-                    @RotateCamera.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
-                    @RotateCamera.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
                     @MouseControlCamera.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMouseControlCamera;
                     @MouseControlCamera.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMouseControlCamera;
                     @MouseControlCamera.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMouseControlCamera;
@@ -1889,9 +1820,6 @@ namespace Jammers
                     @OpenInventory.started += instance.OnOpenInventory;
                     @OpenInventory.performed += instance.OnOpenInventory;
                     @OpenInventory.canceled += instance.OnOpenInventory;
-                    @RotateCamera.started += instance.OnRotateCamera;
-                    @RotateCamera.performed += instance.OnRotateCamera;
-                    @RotateCamera.canceled += instance.OnRotateCamera;
                     @MouseControlCamera.started += instance.OnMouseControlCamera;
                     @MouseControlCamera.performed += instance.OnMouseControlCamera;
                     @MouseControlCamera.canceled += instance.OnMouseControlCamera;
@@ -2147,7 +2075,6 @@ namespace Jammers
             void OnInteract(InputAction.CallbackContext context);
             void OnPause(InputAction.CallbackContext context);
             void OnOpenInventory(InputAction.CallbackContext context);
-            void OnRotateCamera(InputAction.CallbackContext context);
             void OnMouseControlCamera(InputAction.CallbackContext context);
             void OnRun(InputAction.CallbackContext context);
         }
