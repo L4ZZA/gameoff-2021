@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-public class DescriptionBaseSO : ScriptableObject
+namespace Jammers
 {
-    [Multiline(3)]
-    public string Description;
+    public class DescriptionBaseSO : ScriptableObject
+    {
+        [Multiline(3)]
+        public string Description;
+    }
 }

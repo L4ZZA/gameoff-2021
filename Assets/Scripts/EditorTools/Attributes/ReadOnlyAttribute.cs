@@ -1,3 +1,6 @@
 using UnityEngine;
 
-public class ReadOnlyAttribute : PropertyAttribute { }
+namespace Jammers
+{
+    public class ReadOnlyAttribute : PropertyAttribute { }
+}
