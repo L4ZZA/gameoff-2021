@@ -296,7 +296,7 @@ MonoBehaviour:
   _inputReader: {fileID: 11400000, guid: 0701910e407f57a469b12f43ce468078, type: 2}
   _playerTransformAnchor: {fileID: 11400000, guid: b5d09d19ec95a3d44988697eacb32bae, type: 2}
   _characterController: {fileID: 394452965}
-  _speed: 5
+  _speed: {fileID: 11400000, guid: 880356c3b5551af4896a68f6d4cb37bf, type: 2}
 --- !u!143 &394452965
 CharacterController:
   m_ObjectHideFlags: 0
@@ -531,8 +531,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675321668}
-  m_LocalRotation: {x: 0.38268346, y: -0.000000022481217, z: 0.000000009312026, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 7.5, z: -7}
+  m_LocalRotation: {x: 0.5019268, y: -0.000000024357835, z: 0.0000000141354, w: 0.8649101}
+  m_LocalPosition: {x: 0, y: 7.5, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1988640407}
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 394452963}
   m_Follow: {fileID: 394452963}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 80
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -661,7 +661,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -686,8 +686,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.38268346, y: -0.000000022481217, z: 0.000000009312026, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 7.5, z: -7}
+  m_LocalRotation: {x: 0.5019268, y: -0.000000024357835, z: 0.0000000141354, w: 0.8649101}
+  m_LocalPosition: {x: 0, y: 7.5, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2075527045}
@@ -771,10 +771,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 7, z: -7}
+  m_FollowOffset: {x: 0, y: 7, z: -4}
   m_XDamping: 0
   m_YDamping: 1
-  m_ZDamping: 1
+  m_ZDamping: 0
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
