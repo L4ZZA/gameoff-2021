@@ -30,8 +30,6 @@ namespace Jammers
             //_inputReader.JumpEvent += OnJumpInitiated;
             //_inputReader.JumpCanceledEvent += OnJumpCanceled;
             _inputReader.MoveEvent += OnMove;
-            //_inputReader.StartedRunning += OnStartedRunning;
-            //_inputReader.StoppedRunning += OnStoppedRunning;
             //_inputReader.AttackEvent += OnStartedAttack;
             //...
         }
@@ -40,9 +38,6 @@ namespace Jammers
         {
             SpawnPlayer();
         }
-
-        bool _previousVertically = false;
-        bool _previousHorizontal = false;
 
         private void Update()
         {
@@ -55,23 +50,20 @@ namespace Jammers
             // reset direction
             _topDownMovement = Vector3.zero;
 
-            bool horizontal = _inputVector.x != 0;
-            bool vertical = _inputVector.y != 0;
-
-            _previousVertically = false;
-            _previousHorizontal = false;
+            bool horizontal = Mathf.Abs(_inputVector.x) > 0;
+            bool vertical = Mathf.Abs(_inputVector.y) > 0;
+            bool horizontalPriority = Mathf.Abs(_inputVector.y) > Mathf.Abs(_inputVector.x);
 
             if (horizontal)
             {
                 _topDownMovement.x = Mathf.Sign(_inputVector.x);
-                _previousHorizontal = true;
-                //Debug.Log($"movement x: {_topDownMovement}");
             }
-            else if (vertical)
+            else
             {
-                _previousVertically = true;
-                _topDownMovement.z = Mathf.Sign(_inputVector.y);
-                //Debug.Log($"movement y: {_topDownMovement}");
+                if (vertical && horizontalPriority)
+                {
+                    _topDownMovement.z = Mathf.Sign(_inputVector.y);
+                }
             }
 
             _characterController.Move(_topDownMovement * Time.deltaTime * _speed.Value);
@@ -95,7 +87,6 @@ namespace Jammers
 
         private void OnMove(Vector2 movement)
         {
-            Debug.Log($"raw input: {movement}");
             _inputVector = movement;
         }
     }
