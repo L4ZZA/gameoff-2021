@@ -1,20 +1,32 @@
+using System;
 using UnityEngine;
 
 namespace Jammers
 {
-
-    public class PlayerAnchor : MonoBehaviour
+    [RequireComponent(typeof(CharacterController))]
+    public class PlayerMovement : MonoBehaviour
     {
         [Header("Asset References")]
         [SerializeField]
         private InputReader _inputReader = default;
         [SerializeField]
         private TransformAnchor _playerTransformAnchor = default;
+        [SerializeField]
+        CharacterController _characterController;
+
+        [Header("Settings")]
+        [SerializeField, Range(1, 10)]
+        float _speed = 5;
+
+        Rigidbody rb;
         private Vector2 _inputVector;
+        private Vector3 _topDownMovement;
 
         //Adds listeners for events being triggered in the InputReader script
         private void OnEnable()
         {
+            rb = GetComponent<Rigidbody>();
+
             //_inputReader.JumpEvent += OnJumpInitiated;
             //_inputReader.JumpCanceledEvent += OnJumpCanceled;
             _inputReader.MoveEvent += OnMove;
@@ -29,17 +41,45 @@ namespace Jammers
             SpawnPlayer();
         }
 
+        bool _previousVertically = false;
+        bool _previousHorizontal = false;
+
         private void Update()
         {
-            RecalculateMovement();
+            HandleMovement();
+            HandleRotation();
         }
 
-        private void RecalculateMovement()
+        private void HandleMovement()
         {
-            Vector3 pos = transform.position;
-            pos.x += _inputVector.x;
-            pos.z += _inputVector.y;
-            transform.position = pos;
+            // reset direction
+            _topDownMovement = Vector3.zero;
+
+            bool horizontal = _inputVector.x != 0;
+            bool vertical = _inputVector.y != 0;
+
+            _previousVertically = false;
+            _previousHorizontal = false;
+
+            if (horizontal)
+            {
+                _topDownMovement.x = Mathf.Sign(_inputVector.x);
+                _previousHorizontal = true;
+                //Debug.Log($"movement x: {_topDownMovement}");
+            }
+            else if (vertical)
+            {
+                _previousVertically = true;
+                _topDownMovement.z = Mathf.Sign(_inputVector.y);
+                //Debug.Log($"movement y: {_topDownMovement}");
+            }
+
+            _topDownMovement.Normalize();
+            _characterController.Move(_topDownMovement * Time.deltaTime);
+        }
+
+        private void HandleRotation()
+        {
         }
 
         private void SpawnPlayer()
@@ -53,9 +93,10 @@ namespace Jammers
             //TODO: Probably move this to the GameManager once it's up and running
             _inputReader.EnableGameplayInput();
         }
+
         private void OnMove(Vector2 movement)
         {
-
+            Debug.Log($"raw input: {movement}");
             _inputVector = movement;
         }
     }
