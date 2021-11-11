@@ -15,8 +15,8 @@ namespace Jammers
         CharacterController _characterController;
 
         [Header("Settings")]
-        [SerializeField, Range(1, 10)]
-        float _speed = 5;
+        [SerializeField]
+        FloatVariable _speed;
 
         Rigidbody rb;
         private Vector2 _inputVector;
@@ -74,8 +74,7 @@ namespace Jammers
                 //Debug.Log($"movement y: {_topDownMovement}");
             }
 
-            _topDownMovement.Normalize();
-            _characterController.Move(_topDownMovement * Time.deltaTime);
+            _characterController.Move(_topDownMovement * Time.deltaTime * _speed.Value);
         }
 
         private void HandleRotation()
