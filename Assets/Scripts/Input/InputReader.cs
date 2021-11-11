@@ -30,8 +30,7 @@ namespace Jammers
         public event UnityAction<Vector2> MoveEvent = delegate { };
         public event UnityAction EnableMouseControlCameraEvent = delegate { };
         public event UnityAction DisableMouseControlCameraEvent = delegate { };
-        public event UnityAction StartedRunning = delegate { };
-        public event UnityAction StoppedRunning = delegate { };
+        public event UnityAction DashEvent = delegate { };
 
         // Shared between menus and dialogues
         public event UnityAction MoveSelectionEvent = delegate { };
@@ -54,14 +53,18 @@ namespace Jammers
 
         private GameInput _gameInput;
 
+        [ReadOnly]
+        bool _isGamepad;
+        public bool IsGamepad => _isGamepad;
+
         private void OnEnable()
         {
             if (_gameInput == null)
             {
                 _gameInput = new GameInput();
 
-                _gameInput.Menus.SetCallbacks(this);
                 _gameInput.Gameplay.SetCallbacks(this);
+                _gameInput.Menus.SetCallbacks(this);
                 _gameInput.Dialogues.SetCallbacks(this);
                 _gameInput.Cheats.SetCallbacks(this);
             }
@@ -144,20 +147,17 @@ namespace Jammers
 
         public void OnMove(InputAction.CallbackContext context)
         {
+            _isGamepad =IsDeviceGamepad(context);
             var value = context.ReadValue<Vector2>();
-            Debug.Log($"moving {value}");
             MoveEvent.Invoke(value);
         }
 
-        public void OnRun(InputAction.CallbackContext context)
+        public void OnDash(InputAction.CallbackContext context)
         {
             switch (context.phase)
             {
                 case InputActionPhase.Performed:
-                    StartedRunning.Invoke();
-                    break;
-                case InputActionPhase.Canceled:
-                    StoppedRunning.Invoke();
+                    DashEvent.Invoke();
                     break;
             }
         }
@@ -193,7 +193,6 @@ namespace Jammers
 
         public void OnAdvanceDialogue(InputAction.CallbackContext context)
         {
-
             if (context.phase == InputActionPhase.Performed)
             {
                 AdvanceDialogueEvent.Invoke();
@@ -269,6 +268,8 @@ namespace Jammers
                 TabSwitched.Invoke(context.ReadValue<float>());
             }
         }
+
+	    private bool IsDeviceGamepad(InputAction.CallbackContext context) => context.control.device.name != "Mouse";
 
         public bool LeftMouseDown() => Mouse.current.leftButton.isPressed;
 

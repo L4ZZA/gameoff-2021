@@ -10,14 +10,6 @@
                     "type": "Value",
                     "id": "70ba075a-c99d-4c2a-8e36-b737e01335d7",
                     "expectedControlType": "Vector2",
-                    "processors": "StickDeadzone",
-                    "interactions": ""
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "3eaecd7b-06b3-4e43-a7e5-69da17471cfd",
-                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
@@ -54,15 +46,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MouseControlCamera",
-                    "type": "Button",
-                    "id": "baeff631-5c87-4830-97ff-63752ff2ebb4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Run",
+                    "name": "Dash",
                     "type": "Button",
                     "id": "92e1ff29-85a3-4519-831d-5b61d3ac88c1",
                     "expectedControlType": "Button",
@@ -71,17 +55,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "2a75167a-4f3c-4383-831d-8b89d757a239",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "41425813-3c80-4f99-8531-d48d397890cd",
@@ -172,23 +145,12 @@
                 },
                 {
                     "name": "",
-                    "id": "11e81718-f782-4d07-8c8d-eaacbd2babd3",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "MouseControlCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "332272ff-27eb-4d6b-8f70-d172e23f4549",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "Run",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -199,18 +161,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "Run",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e1106842-e005-417d-814d-12f5911e1da5",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Jump",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -230,7 +181,7 @@
                     "id": "14365b6c-f889-4491-9ffb-ca47ea38e001",
                     "path": "2DVector",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=0.6,y=0.6)",
+                    "processors": "ScaleVector2",
                     "groups": "MouseAndKeyboard",
                     "action": "Move",
                     "isComposite": true,
@@ -285,7 +236,7 @@
                     "id": "e5f4be53-b1f2-4b2a-b749-4cca64798c4f",
                     "path": "2DVector",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=0.6,y=0.6)",
+                    "processors": "ScaleVector2",
                     "groups": "MouseAndKeyboard",
                     "action": "Move",
                     "isComposite": true,
@@ -340,7 +291,7 @@
                     "id": "2ad8128a-6032-4e52-85eb-c8935d78904b",
                     "path": "2DVector(mode=2)",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "StickDeadzone,ScaleVector2(x=1.4,y=1.4)",
                     "groups": "Gamepad",
                     "action": "Move",
                     "isComposite": true,
