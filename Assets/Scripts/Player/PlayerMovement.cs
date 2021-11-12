@@ -67,8 +67,8 @@ namespace Jammers
             {
                 _topDownMovement.z = Mathf.Sign(_inputVector.y);
             }
-
-            _characterController.Move(_topDownMovement.normalized * Time.deltaTime * _speed.Value);
+            _topDownMovement.Normalize()
+            _characterController.Move(_topDownMovement * Time.deltaTime * _speed.Value);
         }
 
         private void HandleRotation()
