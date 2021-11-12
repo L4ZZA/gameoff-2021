@@ -28,16 +28,20 @@ namespace Jammers
         {
             rb = GetComponent<Rigidbody>();
 
-            //_inputReader.JumpEvent += OnJumpInitiated;
+            _inputReader.DashEvent += OnDashTriggered;
             //_inputReader.JumpCanceledEvent += OnJumpCanceled;
             _inputReader.MoveEvent += OnMove;
             //_inputReader.AttackEvent += OnStartedAttack;
             //...
         }
 
+        private void OnDashTriggered()
+        {
+            Debug.Log("Dashed");
+        }
+
         private void Start()
         {
-            _xzForward = Vector3.zero;
             SpawnPlayer();
         }
 
