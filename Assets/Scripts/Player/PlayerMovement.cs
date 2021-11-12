@@ -67,7 +67,7 @@ namespace Jammers
             {
                 _topDownMovement.z = Mathf.Sign(_inputVector.y);
             }
-            _topDownMovement.Normalize()
+            _topDownMovement.Normalize();
             _characterController.Move(_topDownMovement * Time.deltaTime * _speed.Value);
         }
 
