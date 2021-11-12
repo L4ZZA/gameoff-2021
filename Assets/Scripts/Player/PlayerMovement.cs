@@ -52,21 +52,17 @@ namespace Jammers
 
             bool horizontal = Mathf.Abs(_inputVector.x) > 0;
             bool vertical = Mathf.Abs(_inputVector.y) > 0;
-            bool horizontalPriority = Mathf.Abs(_inputVector.y) > Mathf.Abs(_inputVector.x);
 
             if (horizontal)
             {
                 _topDownMovement.x = Mathf.Sign(_inputVector.x);
             }
-            else
+            if (vertical)
             {
-                if (vertical && horizontalPriority)
-                {
-                    _topDownMovement.z = Mathf.Sign(_inputVector.y);
-                }
+                _topDownMovement.z = Mathf.Sign(_inputVector.y);
             }
 
-            _characterController.Move(_topDownMovement * Time.deltaTime * _speed.Value);
+            _characterController.Move(_topDownMovement.normalized * Time.deltaTime * _speed.Value);
         }
 
         private void HandleRotation()
@@ -75,10 +71,6 @@ namespace Jammers
 
         private void SpawnPlayer()
         {
-            //Transform spawnLocation = GetSpawnLocation();
-            //Protagonist playerInstance = Instantiate(_playerPrefab, spawnLocation.position, spawnLocation.rotation);
-
-            //_playerInstantiatedChannel.RaiseEvent(playerInstance.transform);
             _playerTransformAnchor.Provide(transform); //the CameraSystem will pick this up to frame the player
 
             //TODO: Probably move this to the GameManager once it's up and running
