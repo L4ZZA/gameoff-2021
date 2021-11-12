@@ -21,6 +21,7 @@ namespace Jammers
         Rigidbody rb;
         private Vector2 _inputVector;
         private Vector3 _topDownMovement;
+        Vector3 _xzForward;
 
         //Adds listeners for events being triggered in the InputReader script
         private void OnEnable()
@@ -36,6 +37,7 @@ namespace Jammers
 
         private void Start()
         {
+            _xzForward = Vector3.zero;
             SpawnPlayer();
         }
 
@@ -67,6 +69,18 @@ namespace Jammers
 
         private void HandleRotation()
         {
+            bool horizontal = Mathf.Abs(_inputVector.x) > 0;
+            bool vertical = Mathf.Abs(_inputVector.y) > 0;
+
+            if (horizontal)
+            {
+                _xzForward.x = _inputVector.normalized.x;
+            }
+            if (vertical)
+            {
+                _xzForward.z = _inputVector.normalized.y;
+            }
+            transform.forward = _xzForward;
         }
 
         private void SpawnPlayer()
