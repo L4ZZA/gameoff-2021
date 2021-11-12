@@ -1980,7 +1980,7 @@ Transform:
   - {fileID: 1988640407}
   m_Father: {fileID: 2075527045}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1675321670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2134,7 +2134,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075527045}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1687258586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2157,6 +2157,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 1
   m_AntialiasingQuality: 2
@@ -2556,7 +2557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 7, z: -4}
+  m_FollowOffset: {x: 0, y: 7, z: -4.0415}
   m_XDamping: 0
   m_YDamping: 1
   m_ZDamping: 0

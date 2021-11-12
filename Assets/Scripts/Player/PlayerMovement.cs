@@ -21,17 +21,24 @@ namespace Jammers
         Rigidbody rb;
         private Vector2 _inputVector;
         private Vector3 _topDownMovement;
+        Vector3 _lastXZForward;
 
         //Adds listeners for events being triggered in the InputReader script
         private void OnEnable()
         {
             rb = GetComponent<Rigidbody>();
 
-            //_inputReader.JumpEvent += OnJumpInitiated;
+            _inputReader.DashEvent += OnDashTriggered;
             //_inputReader.JumpCanceledEvent += OnJumpCanceled;
             _inputReader.MoveEvent += OnMove;
             //_inputReader.AttackEvent += OnStartedAttack;
             //...
+            _lastXZForward = transform.forward;
+        }
+
+        private void OnDashTriggered()
+        {
+            Debug.Log("Dashed");
         }
 
         private void Start()
@@ -52,33 +59,37 @@ namespace Jammers
 
             bool horizontal = Mathf.Abs(_inputVector.x) > 0;
             bool vertical = Mathf.Abs(_inputVector.y) > 0;
-            bool horizontalPriority = Mathf.Abs(_inputVector.y) > Mathf.Abs(_inputVector.x);
 
             if (horizontal)
             {
                 _topDownMovement.x = Mathf.Sign(_inputVector.x);
             }
-            else
+            if (vertical)
             {
-                if (vertical && horizontalPriority)
-                {
-                    _topDownMovement.z = Mathf.Sign(_inputVector.y);
-                }
+                _topDownMovement.z = Mathf.Sign(_inputVector.y);
             }
-
+            _topDownMovement.Normalize();
             _characterController.Move(_topDownMovement * Time.deltaTime * _speed.Value);
         }
 
         private void HandleRotation()
         {
+            var _xzForward = transform.forward;
+            _xzForward.x = _inputVector.normalized.x;
+            _xzForward.z = _inputVector.normalized.y;
+
+            bool idle = Mathf.Abs(_inputVector.x) == 0 && Mathf.Abs(_inputVector.y) == 0;
+            if (idle)
+            {
+                _xzForward = _lastXZForward;
+            }
+
+            transform.forward = _xzForward;
+            _lastXZForward = _xzForward;
         }
 
         private void SpawnPlayer()
         {
-            //Transform spawnLocation = GetSpawnLocation();
-            //Protagonist playerInstance = Instantiate(_playerPrefab, spawnLocation.position, spawnLocation.rotation);
-
-            //_playerInstantiatedChannel.RaiseEvent(playerInstance.transform);
             _playerTransformAnchor.Provide(transform); //the CameraSystem will pick this up to frame the player
 
             //TODO: Probably move this to the GameManager once it's up and running
