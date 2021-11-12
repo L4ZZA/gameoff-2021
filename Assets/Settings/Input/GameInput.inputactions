@@ -10,14 +10,6 @@
                     "type": "Value",
                     "id": "70ba075a-c99d-4c2a-8e36-b737e01335d7",
                     "expectedControlType": "Vector2",
-                    "processors": "StickDeadzone",
-                    "interactions": ""
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "3eaecd7b-06b3-4e43-a7e5-69da17471cfd",
-                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
@@ -54,23 +46,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "RotateCamera",
-                    "type": "Value",
-                    "id": "1e83df91-f55f-4e15-9fbb-5867bfb536ac",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "MouseControlCamera",
-                    "type": "Button",
-                    "id": "baeff631-5c87-4830-97ff-63752ff2ebb4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Run",
+                    "name": "Dash",
                     "type": "Button",
                     "id": "92e1ff29-85a3-4519-831d-5b61d3ac88c1",
                     "expectedControlType": "Button",
@@ -79,17 +55,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "2a75167a-4f3c-4383-831d-8b89d757a239",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "41425813-3c80-4f99-8531-d48d397890cd",
@@ -179,101 +144,13 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Keyboard IJKL",
-                    "id": "bb5bdd36-12f9-4c58-8a8a-42c6ad4bccde",
-                    "path": "2DVector(mode=1)",
-                    "interactions": "",
-                    "processors": "ScaleVector2(x=8,y=8)",
-                    "groups": "",
-                    "action": "RotateCamera",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "66057745-e282-4695-87a5-fd5b58d5a364",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardOrGamepad",
-                    "action": "RotateCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "de278692-758a-4a96-aba7-35337e1a4d29",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardOrGamepad",
-                    "action": "RotateCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "0a2a80af-264e-444a-b3dd-59270009cd2c",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardOrGamepad",
-                    "action": "RotateCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "5d52e22a-0950-4dff-b20c-09810bf8c340",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardOrGamepad",
-                    "action": "RotateCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "a3a6f54e-04ce-4a19-abd9-00abb5afebbe",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "StickDeadzone,ScaleVector2(x=8,y=8)",
-                    "groups": "KeyboardOrGamepad;Gamepad",
-                    "action": "RotateCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d0ad277c-40b5-4184-b700-83b7c2535107",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "ScaleVector2(x=2,y=2)",
-                    "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "RotateCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "11e81718-f782-4d07-8c8d-eaacbd2babd3",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "MouseControlCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "",
                     "id": "332272ff-27eb-4d6b-8f70-d172e23f4549",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "Run",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -284,18 +161,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardOrGamepad;MouseAndKeyboard",
-                    "action": "Run",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e1106842-e005-417d-814d-12f5911e1da5",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Jump",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -315,7 +181,7 @@
                     "id": "14365b6c-f889-4491-9ffb-ca47ea38e001",
                     "path": "2DVector",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=0.6,y=0.6)",
+                    "processors": "ScaleVector2",
                     "groups": "MouseAndKeyboard",
                     "action": "Move",
                     "isComposite": true,
@@ -325,6 +191,17 @@
                     "name": "up",
                     "id": "8cd7845f-48ff-4219-bb16-f2b12b380d0f",
                     "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "a390c1fb-20bc-4c9f-b163-557231a3456e",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "MouseAndKeyboard",
@@ -344,11 +221,22 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "right",
+                    "id": "bc1916fd-aba7-41de-9817-d1f04ce7d76b",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "Keyboard Arrows",
                     "id": "e5f4be53-b1f2-4b2a-b749-4cca64798c4f",
                     "path": "2DVector",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=0.6,y=0.6)",
+                    "processors": "ScaleVector2",
                     "groups": "MouseAndKeyboard",
                     "action": "Move",
                     "isComposite": true,
@@ -403,7 +291,7 @@
                     "id": "2ad8128a-6032-4e52-85eb-c8935d78904b",
                     "path": "2DVector(mode=2)",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "StickDeadzone,ScaleVector2(x=1.4,y=1.4)",
                     "groups": "Gamepad",
                     "action": "Move",
                     "isComposite": true,

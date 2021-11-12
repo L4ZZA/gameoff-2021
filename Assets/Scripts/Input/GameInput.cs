@@ -25,14 +25,6 @@ namespace Jammers
                     ""type"": ""Value"",
                     ""id"": ""70ba075a-c99d-4c2a-8e36-b737e01335d7"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": ""StickDeadzone"",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""3eaecd7b-06b3-4e43-a7e5-69da17471cfd"",
-                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -69,23 +61,7 @@ namespace Jammers
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""RotateCamera"",
-                    ""type"": ""Value"",
-                    ""id"": ""1e83df91-f55f-4e15-9fbb-5867bfb536ac"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""MouseControlCamera"",
-                    ""type"": ""Button"",
-                    ""id"": ""baeff631-5c87-4830-97ff-63752ff2ebb4"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Run"",
+                    ""name"": ""Dash"",
                     ""type"": ""Button"",
                     ""id"": ""92e1ff29-85a3-4519-831d-5b61d3ac88c1"",
                     ""expectedControlType"": ""Button"",
@@ -94,17 +70,6 @@ namespace Jammers
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""2a75167a-4f3c-4383-831d-8b89d757a239"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad;MouseAndKeyboard"",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""41425813-3c80-4f99-8531-d48d397890cd"",
@@ -194,101 +159,13 @@ namespace Jammers
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Keyboard IJKL"",
-                    ""id"": ""bb5bdd36-12f9-4c58-8a8a-42c6ad4bccde"",
-                    ""path"": ""2DVector(mode=1)"",
-                    ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=8,y=8)"",
-                    ""groups"": """",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""66057745-e282-4695-87a5-fd5b58d5a364"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""de278692-758a-4a96-aba7-35337e1a4d29"",
-                    ""path"": ""<Keyboard>/k"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""0a2a80af-264e-444a-b3dd-59270009cd2c"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""5d52e22a-0950-4dff-b20c-09810bf8c340"",
-                    ""path"": ""<Keyboard>/l"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a3a6f54e-04ce-4a19-abd9-00abb5afebbe"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": ""StickDeadzone,ScaleVector2(x=8,y=8)"",
-                    ""groups"": ""KeyboardOrGamepad;Gamepad"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d0ad277c-40b5-4184-b700-83b7c2535107"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=2,y=2)"",
-                    ""groups"": ""KeyboardOrGamepad;MouseAndKeyboard"",
-                    ""action"": ""RotateCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""11e81718-f782-4d07-8c8d-eaacbd2babd3"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardOrGamepad;MouseAndKeyboard"",
-                    ""action"": ""MouseControlCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": """",
                     ""id"": ""332272ff-27eb-4d6b-8f70-d172e23f4549"",
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardOrGamepad;MouseAndKeyboard"",
-                    ""action"": ""Run"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -299,18 +176,7 @@ namespace Jammers
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardOrGamepad;MouseAndKeyboard"",
-                    ""action"": ""Run"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e1106842-e005-417d-814d-12f5911e1da5"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Jump"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -330,7 +196,7 @@ namespace Jammers
                     ""id"": ""14365b6c-f889-4491-9ffb-ca47ea38e001"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=0.6,y=0.6)"",
+                    ""processors"": ""ScaleVector2"",
                     ""groups"": ""MouseAndKeyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": true,
@@ -340,6 +206,17 @@ namespace Jammers
                     ""name"": ""up"",
                     ""id"": ""8cd7845f-48ff-4219-bb16-f2b12b380d0f"",
                     ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a390c1fb-20bc-4c9f-b163-557231a3456e"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MouseAndKeyboard"",
@@ -359,11 +236,22 @@ namespace Jammers
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""right"",
+                    ""id"": ""bc1916fd-aba7-41de-9817-d1f04ce7d76b"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": ""Keyboard Arrows"",
                     ""id"": ""e5f4be53-b1f2-4b2a-b749-4cca64798c4f"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=0.6,y=0.6)"",
+                    ""processors"": ""ScaleVector2"",
                     ""groups"": ""MouseAndKeyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": true,
@@ -418,7 +306,7 @@ namespace Jammers
                     ""id"": ""2ad8128a-6032-4e52-85eb-c8935d78904b"",
                     ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone,ScaleVector2(x=1.4,y=1.4)"",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Move"",
                     ""isComposite"": true,
@@ -1728,14 +1616,11 @@ namespace Jammers
             // Gameplay
             m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
             m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
-            m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
             m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
             m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
             m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
             m_Gameplay_OpenInventory = m_Gameplay.FindAction("OpenInventory", throwIfNotFound: true);
-            m_Gameplay_RotateCamera = m_Gameplay.FindAction("RotateCamera", throwIfNotFound: true);
-            m_Gameplay_MouseControlCamera = m_Gameplay.FindAction("MouseControlCamera", throwIfNotFound: true);
-            m_Gameplay_Run = m_Gameplay.FindAction("Run", throwIfNotFound: true);
+            m_Gameplay_Dash = m_Gameplay.FindAction("Dash", throwIfNotFound: true);
             // Menus
             m_Menus = asset.FindActionMap("Menus", throwIfNotFound: true);
             m_Menus_MoveSelection = m_Menus.FindAction("MoveSelection", throwIfNotFound: true);
@@ -1810,27 +1695,21 @@ namespace Jammers
         private readonly InputActionMap m_Gameplay;
         private IGameplayActions m_GameplayActionsCallbackInterface;
         private readonly InputAction m_Gameplay_Move;
-        private readonly InputAction m_Gameplay_Jump;
         private readonly InputAction m_Gameplay_Attack;
         private readonly InputAction m_Gameplay_Interact;
         private readonly InputAction m_Gameplay_Pause;
         private readonly InputAction m_Gameplay_OpenInventory;
-        private readonly InputAction m_Gameplay_RotateCamera;
-        private readonly InputAction m_Gameplay_MouseControlCamera;
-        private readonly InputAction m_Gameplay_Run;
+        private readonly InputAction m_Gameplay_Dash;
         public struct GameplayActions
         {
             private @GameInput m_Wrapper;
             public GameplayActions(@GameInput wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Gameplay_Move;
-            public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
             public InputAction @Attack => m_Wrapper.m_Gameplay_Attack;
             public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
             public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
             public InputAction @OpenInventory => m_Wrapper.m_Gameplay_OpenInventory;
-            public InputAction @RotateCamera => m_Wrapper.m_Gameplay_RotateCamera;
-            public InputAction @MouseControlCamera => m_Wrapper.m_Gameplay_MouseControlCamera;
-            public InputAction @Run => m_Wrapper.m_Gameplay_Run;
+            public InputAction @Dash => m_Wrapper.m_Gameplay_Dash;
             public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -1843,9 +1722,6 @@ namespace Jammers
                     @Move.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
                     @Move.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
                     @Move.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
-                    @Jump.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJump;
-                    @Jump.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJump;
-                    @Jump.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJump;
                     @Attack.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttack;
                     @Attack.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttack;
                     @Attack.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttack;
@@ -1858,15 +1734,9 @@ namespace Jammers
                     @OpenInventory.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
                     @OpenInventory.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
                     @OpenInventory.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnOpenInventory;
-                    @RotateCamera.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
-                    @RotateCamera.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
-                    @RotateCamera.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
-                    @MouseControlCamera.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMouseControlCamera;
-                    @MouseControlCamera.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMouseControlCamera;
-                    @MouseControlCamera.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMouseControlCamera;
-                    @Run.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRun;
-                    @Run.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRun;
-                    @Run.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRun;
+                    @Dash.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
+                    @Dash.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
+                    @Dash.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
                 }
                 m_Wrapper.m_GameplayActionsCallbackInterface = instance;
                 if (instance != null)
@@ -1874,9 +1744,6 @@ namespace Jammers
                     @Move.started += instance.OnMove;
                     @Move.performed += instance.OnMove;
                     @Move.canceled += instance.OnMove;
-                    @Jump.started += instance.OnJump;
-                    @Jump.performed += instance.OnJump;
-                    @Jump.canceled += instance.OnJump;
                     @Attack.started += instance.OnAttack;
                     @Attack.performed += instance.OnAttack;
                     @Attack.canceled += instance.OnAttack;
@@ -1889,15 +1756,9 @@ namespace Jammers
                     @OpenInventory.started += instance.OnOpenInventory;
                     @OpenInventory.performed += instance.OnOpenInventory;
                     @OpenInventory.canceled += instance.OnOpenInventory;
-                    @RotateCamera.started += instance.OnRotateCamera;
-                    @RotateCamera.performed += instance.OnRotateCamera;
-                    @RotateCamera.canceled += instance.OnRotateCamera;
-                    @MouseControlCamera.started += instance.OnMouseControlCamera;
-                    @MouseControlCamera.performed += instance.OnMouseControlCamera;
-                    @MouseControlCamera.canceled += instance.OnMouseControlCamera;
-                    @Run.started += instance.OnRun;
-                    @Run.performed += instance.OnRun;
-                    @Run.canceled += instance.OnRun;
+                    @Dash.started += instance.OnDash;
+                    @Dash.performed += instance.OnDash;
+                    @Dash.canceled += instance.OnDash;
                 }
             }
         }
@@ -2142,14 +2003,11 @@ namespace Jammers
         public interface IGameplayActions
         {
             void OnMove(InputAction.CallbackContext context);
-            void OnJump(InputAction.CallbackContext context);
             void OnAttack(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
             void OnPause(InputAction.CallbackContext context);
             void OnOpenInventory(InputAction.CallbackContext context);
-            void OnRotateCamera(InputAction.CallbackContext context);
-            void OnMouseControlCamera(InputAction.CallbackContext context);
-            void OnRun(InputAction.CallbackContext context);
+            void OnDash(InputAction.CallbackContext context);
         }
         public interface IMenusActions
         {
