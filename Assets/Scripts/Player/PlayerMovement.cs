@@ -33,6 +33,7 @@ namespace Jammers
             _inputReader.MoveEvent += OnMove;
             //_inputReader.AttackEvent += OnStartedAttack;
             //...
+            _lastXZForward = transform.forward;
         }
 
         private void OnDashTriggered()
@@ -73,11 +74,11 @@ namespace Jammers
 
         private void HandleRotation()
         {
-            var _xzForward = Vector3.zero;
+            var _xzForward = transform.forward;
             _xzForward.x = _inputVector.normalized.x;
             _xzForward.z = _inputVector.normalized.y;
 
-            bool idle = Mathf.Abs(_inputVector.x) == 0 || Mathf.Abs(_inputVector.y) == 0;
+            bool idle = Mathf.Abs(_inputVector.x) == 0 && Mathf.Abs(_inputVector.y) == 0;
             if (idle)
             {
                 _xzForward = _lastXZForward;
