@@ -97,6 +97,7 @@ namespace Jammers
             if (context.phase == InputActionPhase.Performed)
                 OpenInventoryEvent.Invoke();
         }
+
         public void OnCancel(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)

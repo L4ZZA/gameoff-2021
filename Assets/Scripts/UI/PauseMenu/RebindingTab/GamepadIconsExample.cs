@@ -1,9 +1,11 @@
 using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 ////TODO: have updateBindingUIEvent receive a control path string, too (in addition to the device layout name)
 
-namespace UnityEngine.InputSystem.Samples.RebindUI
+namespace Jammers
 {
     /// <summary>
     /// This is an example for how to override the default display behavior of bindings. The component
