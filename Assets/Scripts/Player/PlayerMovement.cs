@@ -31,9 +31,14 @@ namespace Jammers
             _inputReader.DashEvent += OnDashTriggered;
             //_inputReader.JumpCanceledEvent += OnJumpCanceled;
             _inputReader.MoveEvent += OnMove;
-            //_inputReader.AttackEvent += OnStartedAttack;
+            _inputReader.AttackEvent += Attack;
             //...
             _lastXZForward = transform.forward;
+        }
+
+        private void Attack()
+        {
+            Debug.Log("Attacked");
         }
 
         private void OnDashTriggered()

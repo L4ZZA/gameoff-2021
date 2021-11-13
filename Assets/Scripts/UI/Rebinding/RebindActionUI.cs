@@ -305,7 +305,9 @@ namespace Jammers
             // If we have no rebind overlay and no callback but we have a binding text label,
             // temporarily set the binding text label to "<Waiting>".
             if (m_RebindOverlay == null && m_RebindText == null && m_RebindStartEvent == null && m_BindingText != null)
+            {
                 m_BindingText.text = "<Waiting...>";
+            }
 
             // Give listeners a chance to act on the rebind starting.
             m_RebindStartEvent?.Invoke(this, m_RebindOperation);
@@ -316,10 +318,14 @@ namespace Jammers
         protected void OnEnable()
         {
             if (s_RebindActionUIs == null)
+            {
                 s_RebindActionUIs = new List<RebindActionUI>();
+            }
             s_RebindActionUIs.Add(this);
             if (s_RebindActionUIs.Count == 1)
+            {
                 InputSystem.onActionChange += OnActionChange;
+            }
         }
 
         protected void OnDisable()

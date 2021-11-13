@@ -320,20 +320,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7016740345420840623, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
   m_PrefabInstance: {fileID: 7016740345225588677}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &454868334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454868333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8f6a0b6d484ad04ba35e5a3b1764cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputReader: {fileID: 11400000, guid: 0701910e407f57a469b12f43ce468078, type: 2}
-  _menuToToggle: {fileID: 0}
 --- !u!224 &454868337 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7016740345420840619, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
@@ -1187,6 +1173,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7016740343809355161, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016740343809355161, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016740343809355161, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016740344497692181, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
+      propertyPath: m_BindingId
+      value: 41425813-3c80-4f99-8531-d48d397890cd
+      objectReference: {fileID: 0}
     - target: {fileID: 7016740345420840619, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1289,7 +1291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7016740345420840623, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617746671156069496, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00006866455
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5e49b1d4f93bf943881136347fbfc7e, type: 3}
