@@ -15,8 +15,6 @@ namespace Jammers
         {
             _inputReader.MenuPauseEvent += Pause;
             _inputReader.MenuUnpauseEvent += UnPause;
-            _paused = _menuToToggle.activeInHierarchy;
-            UpdateState();
         }
 
         private void UpdateState()
@@ -42,11 +40,13 @@ namespace Jammers
         private void Pause()
         {
             _paused = true;
+            UpdateState();
         }
 
         private void UnPause()
         {
             _paused = false;
+            UpdateState();
         }
     }
 }
