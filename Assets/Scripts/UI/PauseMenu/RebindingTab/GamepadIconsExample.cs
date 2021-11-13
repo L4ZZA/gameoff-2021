@@ -32,13 +32,19 @@ namespace Jammers
         protected void OnUpdateBindingDisplay(RebindActionUI component, string bindingDisplayString, string deviceLayoutName, string controlPath)
         {
             if (string.IsNullOrEmpty(deviceLayoutName) || string.IsNullOrEmpty(controlPath))
+            {
                 return;
+            }
 
             var icon = default(Sprite);
             if (InputSystem.IsFirstLayoutBasedOnSecond(deviceLayoutName, "DualShockGamepad"))
+            {
                 icon = ps4.GetSprite(controlPath);
+            }
             else if (InputSystem.IsFirstLayoutBasedOnSecond(deviceLayoutName, "Gamepad"))
+            {
                 icon = xbox.GetSprite(controlPath);
+            }
 
             var textComponent = component.bindingText;
 

@@ -52,7 +52,9 @@ namespace Jammers
                 var optionsOld = (InputBinding.DisplayStringOptions)m_DisplayStringOptionsProperty.intValue;
                 var optionsNew = (InputBinding.DisplayStringOptions)EditorGUILayout.EnumFlagsField(m_DisplayOptionsLabel, optionsOld);
                 if (optionsOld != optionsNew)
+                {
                     m_DisplayStringOptionsProperty.intValue = (int)optionsNew;
+                }
             }
 
             // UI section.

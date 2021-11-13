@@ -13,6 +13,8 @@ namespace Jammers
 {
     /// <summary>
     /// A reusable component with a self-contained UI for rebinding a single action.
+    /// If you wonder why the editor window is not changing when adding fields,
+    /// check <see cref="RebindActionUIEditor"/> and add each new field there too.
     /// </summary>
     public class RebindActionUI : MonoBehaviour
     {
@@ -118,7 +120,9 @@ namespace Jammers
             get
             {
                 if (m_UpdateBindingUIEvent == null)
+                {
                     m_UpdateBindingUIEvent = new UpdateBindingUIEvent();
+                }
                 return m_UpdateBindingUIEvent;
             }
         }
@@ -131,7 +135,9 @@ namespace Jammers
             get
             {
                 if (m_RebindStartEvent == null)
+                {
                     m_RebindStartEvent = new InteractiveRebindEvent();
+                }
                 return m_RebindStartEvent;
             }
         }
@@ -205,7 +211,9 @@ namespace Jammers
 
             // Set on label (if any).
             if (m_BindingText != null)
+            {
                 m_BindingText.text = displayString;
+            }
 
             // Give listeners a chance to configure UI in response.
             m_UpdateBindingUIEvent?.Invoke(this, displayString, deviceLayoutName, controlPath);
@@ -246,7 +254,9 @@ namespace Jammers
             {
                 var firstPartIndex = bindingIndex + 1;
                 if (firstPartIndex < action.bindings.Count && action.bindings[firstPartIndex].isPartOfComposite)
+                {
                     PerformInteractiveRebind(action, firstPartIndex, allCompositeParts: true);
+                }
             }
             else
             {
@@ -374,10 +384,14 @@ namespace Jammers
         protected void OnEnable()
         {
             if (s_RebindActionUIs == null)
+            {
                 s_RebindActionUIs = new List<RebindActionUI>();
+            }
             s_RebindActionUIs.Add(this);
             if (s_RebindActionUIs.Count == 1)
+            {
                 InputSystem.onActionChange += OnActionChange;
+            }
         }
 
         protected void OnDisable()
@@ -400,7 +414,9 @@ namespace Jammers
         private static void OnActionChange(object obj, InputActionChange change)
         {
             if (change != InputActionChange.BoundControlsChanged)
+            {
                 return;
+            }
 
             var action = obj as InputAction;
             var actionMap = action?.actionMap ?? obj as InputActionMap;
@@ -411,12 +427,16 @@ namespace Jammers
                 var component = s_RebindActionUIs[i];
                 var referencedAction = component.actionReference?.action;
                 if (referencedAction == null)
+                {
                     continue;
+                }
 
                 if (referencedAction == action ||
                     referencedAction.actionMap == actionMap ||
                     referencedAction.actionMap?.asset == actionAsset)
+                {
                     component.UpdateBindingDisplay();
+                }
             }
         }
 
