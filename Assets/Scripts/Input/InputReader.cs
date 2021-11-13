@@ -95,30 +95,40 @@ namespace Jammers
         public void OnOpenInventory(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
+            {
                 OpenInventoryEvent.Invoke();
+            }
         }
         public void OnCancel(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
+            {
                 MenuCloseEvent.Invoke();
+            }
         }
 
         public void OnInventoryActionButton(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
+            {
                 InventoryActionButtonEvent.Invoke();
+            }
         }
 
         public void OnSaveActionButton(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
+            {
                 SaveActionButtonEvent.Invoke();
+            }
         }
 
         public void OnResetActionButton(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
+            {
                 ResetActionButtonEvent.Invoke();
+            }
         }
 
         public void OnInteract(InputAction.CallbackContext context)
