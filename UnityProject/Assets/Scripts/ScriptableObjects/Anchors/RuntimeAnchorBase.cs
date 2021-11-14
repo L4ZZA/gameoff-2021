@@ -8,7 +8,7 @@ namespace Jammers
     /// make it accessible from any object, without having
     /// to call the costly GetComponent<T>
     /// </summary>
-    public abstract class RuntimeAnchorBase<T> : DescriptionBaseSO where T : UnityEngine.Object
+    public class RuntimeAnchorBase<T> : DescriptionBaseSO where T : UnityEngine.Object
     {
         public UnityAction OnAnchorProvided;
 
@@ -19,7 +19,7 @@ namespace Jammers
         [ReadOnly]
         [SerializeField]
         private T _value;
-        public T Value => _value;
+        public T value => _value;
 
         /// <summary>
         /// Provides the object that we want to keep track of.
