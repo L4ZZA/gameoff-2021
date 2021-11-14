@@ -4,7 +4,7 @@ namespace Jammers
 {
     public class DescriptionBaseSO : ScriptableObject
     {
-        [Multiline(3)]
+        [TextArea(1,10)]
         public string Description;
     }
 }

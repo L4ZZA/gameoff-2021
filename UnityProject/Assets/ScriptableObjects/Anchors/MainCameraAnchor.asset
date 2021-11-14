@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a19d018d0f347d4d90dfbe627aec534, type: 3}
-  m_Name: CameraAnchor
+  m_Name: MainCameraAnchor
   m_EditorClassIdentifier: 
-  Description: 
+  Description: 'Anchor linking to the transform of the main camera '
   isSet: 0
   _value: {fileID: 0}
