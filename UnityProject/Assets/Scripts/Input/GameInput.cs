@@ -262,61 +262,6 @@ namespace Jammers
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Keyboard Arrows"",
-                    ""id"": ""e5f4be53-b1f2-4b2a-b749-4cca64798c4f"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": ""ScaleVector2"",
-                    ""groups"": ""MouseAndKeyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""a0baaf74-7243-41f4-a5a3-eb2e16e00ce8"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""MouseAndKeyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""a588d90f-6f01-42c9-8e28-62ce83e499e2"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""MouseAndKeyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""afe868fe-0c51-4c10-9ca4-02a15502ceac"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""MouseAndKeyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""8c07ce66-2553-4efc-a839-68304b4b9cf5"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""MouseAndKeyboard"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""Gamepad Left Stick"",
                     ""id"": ""2ad8128a-6032-4e52-85eb-c8935d78904b"",
                     ""path"": ""2DVector(mode=2)"",

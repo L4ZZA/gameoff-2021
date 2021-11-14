@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502667, g: 0.37139323, b: 0.49600998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 7dead05c54ca85b4681351aafd8bd03a, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 02910a6910b2d7540ad12a7b18210f5f, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -348,18 +348,102 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 9d8fcbff-87d1-43ef-857e-931c84d5bd72
-    m_ActionName: Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+    m_ActionId: 70ba075a-c99d-4c2a-8e36-b737e01335d7
+    m_ActionName: Gameplay/Move[/Keyboard/w,/Keyboard/a,/Keyboard/s,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: ddab72da-d325-4b4c-a484-abe4f6bdf113
-    m_ActionName: Gameplay/Look[/Mouse/delta]
+    m_ActionId: 4ad49527-8125-407e-b177-120684ea2e04
+    m_ActionName: Gameplay/Attack[/Keyboard/f,/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2bd60403-0923-469e-a3a4-7338b04f6bbc
+    m_ActionId: e233eb3c-9c54-4220-8de6-fbe22836079e
     m_ActionName: Gameplay/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d00fc324-8acc-40c6-8fd1-f293e8640638
+    m_ActionName: Gameplay/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7855c236-a3aa-44ae-875b-00c276444b16
+    m_ActionName: Gameplay/OpenInventory[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 92e1ff29-85a3-4519-831d-5b61d3ac88c1
+    m_ActionName: Gameplay/Dash[/Keyboard/shift,/Keyboard/rightShift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 410221a3-10df-4b7b-b515-1dac3ace175c
+    m_ActionName: Menus/MoveSelection[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9bc7c193-d12e-4dd0-b13c-371ffd758176
+    m_ActionName: Menus/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 030b0c60-88f2-421e-91c1-c47aa3826962
+    m_ActionName: Menus/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 670ff138-2c58-4bee-92f0-f47eb9427a81
+    m_ActionName: Menus/Confirm[/Keyboard/space,/Keyboard/enter,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5abde287-7db6-444f-ab72-602aba881886
+    m_ActionName: Menus/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21d1c1d7-4330-4692-9cfb-e6080c884c6d
+    m_ActionName: Menus/MouseMove[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9b7cf4ae-bab7-4cdd-8d84-3517b85e6567
+    m_ActionName: Menus/Unpause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 69a74eec-e33c-4b2c-a72e-f1db3b559c57
+    m_ActionName: Menus/ChangeTab[/Keyboard/t,/Keyboard/y]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0dd2ee0a-b48b-4027-b1a7-cb978c37ad58
+    m_ActionName: Menus/InventoryActionButton[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7189695d-7c5c-4917-b589-3228410a2a9f
+    m_ActionName: Menus/SaveActionButton[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 925e64ed-e2fc-4cb4-8509-dc5e19fdeee6
+    m_ActionName: Menus/ResetActionButton[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4dc4e10-f573-4793-a80c-a2c0814295e5
+    m_ActionName: Menus/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ecc2a8ff-986d-49bb-b4b0-271fcaa4b0e6
+    m_ActionName: Menus/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f1932a8-c9bd-4cae-a563-4b1c2c1edc64
+    m_ActionName: Menus/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9af61dcb-101f-4fe9-b9d1-3d31c4ae73b0
+    m_ActionName: Menus/CloseInventory[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 41564bf3-0ad1-4060-8482-21003b8ca6e7
+    m_ActionName: Dialogues/MoveSelection[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b27dd560-e21b-4806-9b62-6d96f4856fb8
+    m_ActionName: Dialogues/AdvanceDialogue[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3ef095f0-ce58-4714-8e3b-d6bf43d9c4b7
+    m_ActionName: Cheats/OpenCheatMenu[/Keyboard/c]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: MouseAndKeyboard
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -1208,6 +1292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ControlsTab_panel
       objectReference: {fileID: 0}
+    - target: {fileID: 3693044558595068836, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3693044558595068837, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1293,9 +1381,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3693044560110652715, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693044560110652715, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693044560110652715, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1228071525}
+    - target: {fileID: 3693044560110652715, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693044560110652715, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetBindings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693044560110652715, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResetAllBindings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693044560110652715, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4239110471553623284, guid: d1bfd05e38effaa4793277fc628c96dd, type: 3}
       propertyPath: m_Text
       value: I/J/K/L
@@ -1361,5 +1473,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5609536393618250366, guid: 29e31fe2de58d2345b6c53fe16cb10d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29e31fe2de58d2345b6c53fe16cb10d9, type: 3}

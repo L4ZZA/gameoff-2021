@@ -11,7 +11,8 @@
                     "id": "70ba075a-c99d-4c2a-8e36-b737e01335d7",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Attack",
@@ -19,7 +20,8 @@
                     "id": "4ad49527-8125-407e-b177-120684ea2e04",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Interact",
@@ -27,7 +29,8 @@
                     "id": "e233eb3c-9c54-4220-8de6-fbe22836079e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
@@ -35,7 +38,8 @@
                     "id": "d00fc324-8acc-40c6-8fd1-f293e8640638",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "OpenInventory",
@@ -43,7 +47,8 @@
                     "id": "7855c236-a3aa-44ae-875b-00c276444b16",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Dash",
@@ -51,7 +56,8 @@
                     "id": "92e1ff29-85a3-4519-831d-5b61d3ac88c1",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -232,61 +238,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Keyboard Arrows",
-                    "id": "e5f4be53-b1f2-4b2a-b749-4cca64798c4f",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "ScaleVector2",
-                    "groups": "MouseAndKeyboard",
-                    "action": "Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "a0baaf74-7243-41f4-a5a3-eb2e16e00ce8",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "MouseAndKeyboard",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "a588d90f-6f01-42c9-8e28-62ce83e499e2",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "MouseAndKeyboard",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "afe868fe-0c51-4c10-9ca4-02a15502ceac",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "MouseAndKeyboard",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "8c07ce66-2553-4efc-a839-68304b4b9cf5",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "MouseAndKeyboard",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "Gamepad Left Stick",
                     "id": "2ad8128a-6032-4e52-85eb-c8935d78904b",
                     "path": "2DVector(mode=2)",
@@ -353,7 +304,8 @@
                     "id": "410221a3-10df-4b7b-b515-1dac3ace175c",
                     "expectedControlType": "Vector2",
                     "processors": "StickDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Navigate",
@@ -361,7 +313,8 @@
                     "id": "9bc7c193-d12e-4dd0-b13c-371ffd758176",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Submit",
@@ -369,7 +322,8 @@
                     "id": "030b0c60-88f2-421e-91c1-c47aa3826962",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Confirm",
@@ -377,7 +331,8 @@
                     "id": "670ff138-2c58-4bee-92f0-f47eb9427a81",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Cancel",
@@ -385,7 +340,8 @@
                     "id": "5abde287-7db6-444f-ab72-602aba881886",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "MouseMove",
@@ -393,7 +349,8 @@
                     "id": "21d1c1d7-4330-4692-9cfb-e6080c884c6d",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Unpause",
@@ -401,7 +358,8 @@
                     "id": "9b7cf4ae-bab7-4cdd-8d84-3517b85e6567",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ChangeTab",
@@ -409,7 +367,8 @@
                     "id": "69a74eec-e33c-4b2c-a72e-f1db3b559c57",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "InventoryActionButton",
@@ -417,7 +376,8 @@
                     "id": "0dd2ee0a-b48b-4027-b1a7-cb978c37ad58",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SaveActionButton",
@@ -425,7 +385,8 @@
                     "id": "7189695d-7c5c-4917-b589-3228410a2a9f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ResetActionButton",
@@ -433,7 +394,8 @@
                     "id": "925e64ed-e2fc-4cb4-8509-dc5e19fdeee6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Click",
@@ -441,7 +403,8 @@
                     "id": "b4dc4e10-f573-4793-a80c-a2c0814295e5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Point",
@@ -449,7 +412,8 @@
                     "id": "ecc2a8ff-986d-49bb-b4b0-271fcaa4b0e6",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "RightClick",
@@ -457,7 +421,8 @@
                     "id": "8f1932a8-c9bd-4cae-a563-4b1c2c1edc64",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "CloseInventory",
@@ -465,7 +430,8 @@
                     "id": "9af61dcb-101f-4fe9-b9d1-3d31c4ae73b0",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1262,7 +1228,8 @@
                     "id": "41564bf3-0ad1-4060-8482-21003b8ca6e7",
                     "expectedControlType": "Vector2",
                     "processors": "StickDeadzone",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "AdvanceDialogue",
@@ -1270,7 +1237,8 @@
                     "id": "b27dd560-e21b-4806-9b62-6d96f4856fb8",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1528,7 +1496,8 @@
                     "id": "3ef095f0-ce58-4714-8e3b-d6bf43d9c4b7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
