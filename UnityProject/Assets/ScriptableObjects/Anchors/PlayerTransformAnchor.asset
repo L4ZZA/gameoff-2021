@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5a7ce596e62924f8b0f270f41b7c05, type: 3}
-  m_Name: MainCameraAnchor
+  m_Script: {fileID: 11500000, guid: 4a19d018d0f347d4d90dfbe627aec534, type: 3}
+  m_Name: PlayerTransformAnchor
   m_EditorClassIdentifier: 
-  Description: 'Anchor linking to the camera component of the main camera '
+  Description: Anchor linking to the transform of the player
   isSet: 0
   _value: {fileID: 0}
