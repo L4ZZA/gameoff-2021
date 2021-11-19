@@ -1,37 +1,12 @@
 fileFormatVersion: 2
-guid: 852605fc6084d8c4d9287d6f71bfd0cc
+guid: c6432bc6af58cfd47bff79250e78d7ce
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ch03_Body
-    second: {fileID: 2100000, guid: d9304ee5bf7cbdd4fba231aa25ccfd6d, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch03_1001_Diffuse
-    second: {fileID: 2800000, guid: 55a021d595b3eec4da5130e4e735579f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch03_1001_Glossiness
-    second: {fileID: 2800000, guid: a2f474f9eba8c304e96ef66bfc4d4c22, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch03_1001_Normal
-    second: {fileID: 2800000, guid: da16bfcf4c6790c4482207ba39a09190, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch03_1001_Specular
-    second: {fileID: 2800000, guid: 92b6932e2074ff14fb7b614330ed8b46, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -100,30 +75,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 0dd099997cb8fb64d840263443948960
-  - 207fea07dd6097143a5fac0afd3f6f2c
-  - 62ef88720aebd2f48ad78f7fb63b9582
-  - 208e3b5ec88a1bc47aea1daebad453f2
-  - d6abff5b0c3878e46b70b3a51380c033
-  - 6516d0748e5889a4880260daec60a343
-  - c6432bc6af58cfd47bff79250e78d7ce
-  - c4537ce6b993ee046be3e1b0a4b4f4dc
-  - 5c935a8d3aba8f44798f153917ae8998
-  - 9c9f52f0d5b80234aa2ab00301188a23
-  - 628cc967cc79d2845a0efed266884402
-  - a4f2fc84003191f4cb3638ff48b7ba4c
-  - a1217aa8be46e1944ac5f48553251c31
-  - 56bcc0907a83f714e8ad60df78ca2333
-  - a6c4a293682622e409b4930ad17ae416
-  - 69a43092ac1fe7f409ed9cea253c1517
-  - 433891bb1e9772940b9594840c67c78d
-  - b085abbfdfb390b4f967b14865d3d477
-  - abcf6fc5d74531846abdb65b3818fb78
-  - b3ef71f74285618439591e05823db4c1
-  - 019cdb2562bff944aa5d988764a19ad1
-  - 9d9005ddce20aaf4e9f672ada7b16d2d
-  - 6da65363ceee53341b9b2286ff2e4f45
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -892,11 +844,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 852605fc6084d8c4d9287d6f71bfd0cc, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
