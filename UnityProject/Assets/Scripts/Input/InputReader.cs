@@ -19,8 +19,6 @@ namespace Jammers
         // so we can skip the null check when we use them
 
         // Gameplay
-        public event UnityAction JumpEvent = delegate { };
-        public event UnityAction JumpCanceledEvent = delegate { };
         public event UnityAction AttackEvent = delegate { };
         public event UnityAction AttackCanceledEvent = delegate { };
         public event UnityAction InteractEvent = delegate { }; // Used to talk, pickup objects, interact with tools like the cooking cauldron
@@ -31,6 +29,7 @@ namespace Jammers
         public event UnityAction EnableMouseControlCameraEvent = delegate { };
         public event UnityAction DisableMouseControlCameraEvent = delegate { };
         public event UnityAction DashEvent = delegate { };
+        public event UnityAction DashCanceledEvent = delegate { };
 
         // Shared between menus and dialogues
         public event UnityAction MoveSelectionEvent = delegate { };
@@ -133,18 +132,6 @@ namespace Jammers
             }
         }
 
-        public void OnJump(InputAction.CallbackContext context)
-        {
-            if (context.phase == InputActionPhase.Performed)
-            {
-                JumpEvent.Invoke();
-            }
-            if (context.phase == InputActionPhase.Canceled)
-            {
-                JumpCanceledEvent.Invoke();
-            }
-        }
-
         public void OnMove(InputAction.CallbackContext context)
         {
             _isGamepad =IsDeviceGamepad(context);
@@ -154,11 +141,13 @@ namespace Jammers
 
         public void OnDash(InputAction.CallbackContext context)
         {
-            switch (context.phase)
+            if (context.phase == InputActionPhase.Performed)
             {
-                case InputActionPhase.Performed:
-                    DashEvent.Invoke();
-                    break;
+                DashEvent.Invoke();
+            }
+            if (context.phase == InputActionPhase.Canceled)
+            {
+                DashCanceledEvent.Invoke();
             }
         }
 
