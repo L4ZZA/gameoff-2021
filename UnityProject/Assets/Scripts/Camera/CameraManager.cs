@@ -12,16 +12,15 @@ namespace Jammers
 	    public CinemachineVirtualCamera virtualCamera;
 
         [Header("Anchors")]
-        [SerializeField] private TransformAnchor _cameraTransformAnchor = default;
-        [SerializeField] private TransformAnchor _protagonistTransformAnchor = default;
+        [SerializeField] 
+        private TransformAnchor _protagonistTransformAnchor = default;
+
         private void OnEnable()
         {
             inputReader.MoveEvent += OnCameraMove;
 
             _protagonistTransformAnchor.OnAnchorProvided += SetupProtagonistVirtualCamera;
             //_camShakeEvent.OnEventRaised += impulseSource.GenerateImpulse;
-
-            _cameraTransformAnchor.Provide(mainCamera.transform);
         }
 
         private void OnCameraMove(Vector2 movement)
@@ -34,7 +33,7 @@ namespace Jammers
         /// </summary>
         public void SetupProtagonistVirtualCamera()
         {
-            Transform target = _protagonistTransformAnchor.Value;
+            Transform target = _protagonistTransformAnchor.value;
 
             virtualCamera.Follow = target;
             virtualCamera.LookAt = target;
