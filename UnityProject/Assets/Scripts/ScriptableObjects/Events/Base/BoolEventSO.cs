@@ -7,7 +7,7 @@ namespace Jammers
     /// This class is used for Events that have a bool argument.
     /// Example: An event to toggle a UI interface
     /// </summary>
-    [CreateAssetMenu(menuName = "Events/Bool Event")]
+    [CreateAssetMenu(menuName = "Events/Base/Bool Event")]
     public class BoolEventSO : DescriptionBaseSO
     {
         public event UnityAction<bool> OnEventRaised;

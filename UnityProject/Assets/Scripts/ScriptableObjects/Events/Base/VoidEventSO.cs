@@ -6,7 +6,7 @@ namespace Jammers
     /// <summary>
     /// This class is used for Events that have no arguments (Example: Exit game event)
     /// </summary>
-    [CreateAssetMenu(menuName = "Events/Void Event")]
+    [CreateAssetMenu(menuName = "Events/Base/Void Event")]
     public class VoidEventSO : DescriptionBaseSO
     {
         public UnityAction OnEventRaised;
