@@ -24,17 +24,11 @@ namespace Jammers
             _inputReader.MenuMouseMoveEvent -= HandleMoveCursor;
             _inputReader.MoveSelectionEvent -= HandleMoveSelection;
         }
-        // Debug
-        private void OnGUI()
-        {
-            GUILayout.Box($"_currentSelection: {(_currentSelection != null ? _currentSelection.name : "null")}");
-            GUILayout.Box($"_mouseSelection: {(_mouseSelection != null ? _mouseSelection.name : "null")}");
-        }
 
         private void Update()
         {
-            if ((EventSystem.current != null) && 
-                (EventSystem.current.currentSelectedGameObject == null) && 
+            if ((EventSystem.current != null) &&
+                (EventSystem.current.currentSelectedGameObject == null) &&
                 (_currentSelection != null))
             {
                 EventSystem.current.SetSelectedGameObject(_currentSelection);
@@ -67,8 +61,6 @@ namespace Jammers
             Cursor.visible = true;
         }
 
-
-
         /// <summary>
         /// Highlights the default element
         /// </summary>
@@ -80,6 +72,12 @@ namespace Jammers
             {
                 UpdateSelection(_defaultSelection);
             }
+        }
+
+        // TODO: figure out when to use it..
+        public void UpdateDefault(GameObject newDefault)
+        {
+            _defaultSelection = newDefault;
         }
 
         /// <summary>
