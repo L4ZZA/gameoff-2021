@@ -1,11 +1,15 @@
-using UnityEngine.AddressableAssets;
+
+using UnityEngine;
+using UnityEditor;
 using UnityEngine.SceneManagement;
 
 namespace Jammers
 {
     public class SceneDataSO : DescriptionBaseSO
     {
-        public string sceneReference; //Used at runtime to load the scene from the right AssetBundle
+        public GameSceneType sceneType;
+        //Used at runtime to load the scene from the right AssetBundle
+        public string sceneReference;
         //public AudioCueSO musicTrack;
 
         /// <summary>

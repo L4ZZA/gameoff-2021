@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 90406684}
   - component: {fileID: 90406685}
   m_Layer: 0
-  m_Name: SceneLoadingPanel
+  m_Name: LoadingScreen_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,6 +271,59 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1033920429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1033920430}
+  - component: {fileID: 1033920431}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1033920430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033920429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1033920431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033920429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7e2b075e5b20b4cac30b8b6d0c045c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameplayScene: {fileID: 0}
+  _inputReader: {fileID: 11400000, guid: 0701910e407f57a469b12f43ce468078, type: 2}
+  _loadScene: {fileID: 0}
+  _loadMenu: {fileID: 11400000, guid: 17c3118ab809488449f0dc9501b88055, type: 2}
+  _coldStartupLocation: {fileID: 0}
+  _toggleLoadingScreen: {fileID: 11400000, guid: 850a87f165ddd304abbeae6f27a0f2f7, type: 2}
+  _onSceneReady: {fileID: 11400000, guid: 1751ccb5d87b57049bb585475e443e48, type: 2}
+  _fadeRequest: {fileID: 11400000, guid: f85908daf75fb824ea41424a3b277bb8, type: 2}
+  _fadeDuration: 0.5
 --- !u!1 &1295894658
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +432,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -398,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c56d06b89596d4409a7c4ef561c6dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadingScreen: {fileID: 1763522730}
+  _loadingScreen: {fileID: 90406683}
   _toggleLoadingScreen: {fileID: 11400000, guid: 850a87f165ddd304abbeae6f27a0f2f7, type: 2}
 --- !u!1 &1844773170
 GameObject:
@@ -429,7 +482,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1896249867
 GameObject:
@@ -558,7 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -10,7 +10,7 @@ namespace Jammers
 
         //[Header("Broadcasting on")]
         //[SerializeField] private AssetReference _menuLoadChannel = default;
-        //[SerializeField] private LoadEventChannelSO _menuLoadChannel = default;
+        [SerializeField] private LoadEventSO _menuLoadChannel = default;
 
         private void Start()
         {
@@ -26,7 +26,7 @@ namespace Jammers
 
         private void LoadMainMenu()
         {
-            SceneManager.LoadSceneAsync(_menuToLoad.sceneReference, LoadSceneMode.Additive);
+            _menuLoadChannel.RaiseEvent(_menuToLoad, true);
 
             //Initialization is the only scene in BuildSettings, thus it has index 0
             SceneManager.UnloadSceneAsync(0); 

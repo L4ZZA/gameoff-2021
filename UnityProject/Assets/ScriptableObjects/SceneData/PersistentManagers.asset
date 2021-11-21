@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: Contains data about the persistent managers scene. No more than one
     PersistentManagerSceneSO should exist.
+  sceneType: 3
   sceneReference: PersistentManagers
