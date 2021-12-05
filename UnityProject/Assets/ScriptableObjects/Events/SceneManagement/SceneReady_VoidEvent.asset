@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 784ed9e70868b0f41adb52d29515a21b, type: 3}
-  m_Name: SceneReady
+  m_Name: SceneReady_VoidEvent
   m_EditorClassIdentifier: 
-  Description: 
+  Description: 'Raised by the SceneLoader script when the scene is loaded and set
+    active.
+
+'

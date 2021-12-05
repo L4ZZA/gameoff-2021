@@ -319,7 +319,7 @@ MonoBehaviour:
   _inputReader: {fileID: 11400000, guid: 0701910e407f57a469b12f43ce468078, type: 2}
   _loadScene: {fileID: 0}
   _loadMenu: {fileID: 11400000, guid: 17c3118ab809488449f0dc9501b88055, type: 2}
-  _coldStartupLocation: {fileID: 0}
+  _coldStartupScene: {fileID: 11400000, guid: 9dea449b6a92f554e8cf5a0fbd4d6b0b, type: 2}
   _toggleLoadingScreen: {fileID: 11400000, guid: 850a87f165ddd304abbeae6f27a0f2f7, type: 2}
   _onSceneReady: {fileID: 11400000, guid: 1751ccb5d87b57049bb585475e443e48, type: 2}
   _fadeRequest: {fileID: 11400000, guid: f85908daf75fb824ea41424a3b277bb8, type: 2}

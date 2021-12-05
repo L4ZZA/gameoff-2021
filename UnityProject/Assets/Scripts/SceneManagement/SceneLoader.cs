@@ -18,7 +18,7 @@ namespace Jammers
         [Header("Events listening to")]
         [SerializeField] private LoadEventSO _loadScene = default;
         [SerializeField] private LoadEventSO _loadMenu = default;
-        [SerializeField] private LoadEventSO _coldStartupLocation = default;
+        [SerializeField] private LoadEventSO _coldStartupScene = default;
 
         [Header("Events triggering on")]
         [SerializeField] private BoolEventSO _toggleLoadingScreen = default;
@@ -43,7 +43,7 @@ namespace Jammers
             //_loadScene.OnLoadingRequested += LoadScene;
             _loadMenu.OnLoadingRequested += LoadMenu;
 #if UNITY_EDITOR
-            //_coldStartupLocation.OnLoadingRequested += LocationColdStartup;
+            _coldStartupScene.OnLoadingRequested += LocationColdStartup;
 #endif
 
         }
@@ -52,7 +52,7 @@ namespace Jammers
             //_loadScene.OnLoadingRequested -= LoadScene;
             _loadMenu.OnLoadingRequested -= LoadMenu;
 #if UNITY_EDITOR
-            //_coldStartupLocation.OnLoadingRequested -= LocationColdStartup;
+            _coldStartupScene.OnLoadingRequested -= LocationColdStartup;
 #endif
         }
 
@@ -130,7 +130,7 @@ namespace Jammers
             if (_gameplayManagerSceneInstance != null
                 && _gameplayManagerSceneInstance.isLoaded)
             {
-                //SceneManager.UnloadSceneAsync(_gameplayManagerLoadingOpHandle);
+                SceneManager.UnloadSceneAsync(_gameplayManagerSceneInstance);
             }
 
             StartCoroutine(UnloadPreviousScene());

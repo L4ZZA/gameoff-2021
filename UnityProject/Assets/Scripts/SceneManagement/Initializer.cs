@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 namespace Jammers
 {
+    /// <summary>
+    /// Responsible to load the persistent managers scenes 
+    /// and then the main menu scene
+    /// </summary>
     public class Initializer : MonoBehaviour
     {
         [SerializeField] private SceneDataSO _managersScene = default;
